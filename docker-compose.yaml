@@ -1,7 +1,8 @@
 version: '3'
 services:
- bitwarden:
+  bitwarden:
     image: bitwardenrs/server
+    container_name: bitwarden
     restart: always
     #ports:
     #  - 9093:80
