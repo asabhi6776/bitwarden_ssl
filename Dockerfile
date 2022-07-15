@@ -1,4 +1,5 @@
 FROM nginx:latest
+
 LABEL maintainer="asabhi6776"
 
 ENV DEBIAN_FRONTEND=noninteractive
