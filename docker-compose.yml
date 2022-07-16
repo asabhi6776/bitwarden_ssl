@@ -8,6 +8,12 @@ services:
     #  - 9093:80
     volumes:
       - ./bw-data:/data
+    healthcheck:
+      test: ["bash", "-c", "curl -L http://localhost:80"]
+      interval: 1m
+      timeout: 30s
+      retries: 5
+      start_period: 30s
     environment:
       WEBSOCKET_ENABLED: 'true' # Required to use websockets
       SIGNUPS_ALLOWED: 'true'   # set to false to disable signup
